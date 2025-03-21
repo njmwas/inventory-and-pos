@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point of Sale</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Inventory</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Pos</button>
+            </li>
+        </ul>
+        <div class="tab-content py-3" id="myTabContent">
+            <div class="tab-pane active" id="home-tab-pane">
+                <h3>Inventory Area</h3>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                    Product</button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" id="invetory-form" class="d-flex flex-column gap-3">
+                                    <div class="form-group">
+                                        <label for="name">Product name</label>
+                                        <input type="text" name="name" id="name" required class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="instock">Instock</label>
+                                        <input type="number" name="instock" id="instock" required class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="description">Desription</label>
+                                        <textarea name="description" id="description" cols="3"
+                                            class="form-control"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="description">Price</label>
+                                        <input type="number" name="price" id="price" required class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Add Product</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <table class="table mt-4" id="enventory-list">
+                    <thead>
+                        <th>Name</th>
+                        <th>Qty in Stock</th>
+                        <th>Price</th>
+                    </thead>
+
+                    <tbody></tbody>
+                </table>
+
+            </div>
+
+            <div class="tab-pane fade" id="profile-tab-pane">
+                <h3>POS Area</h3>
+
+
+                <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    Open Shopping Cart
+                </a> -->
+
+                <button type="button" class="btn btn-primary position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                    Shopping Cart
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <span id="item-count">0</span>
+                        <span class="visually-hidden">Items in cart</span>
+                    </span>
+                </button>
+
+                <div id="pos-products" class="d-flex gap-3 flex-wrap"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h3>Shopping Cart</h3>
+
+            <ul id="shopping-cart-items" class="list-group list-group-flush"></ul>
+
+            <h3>Total Price <span id="total-price"></span></h3>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
