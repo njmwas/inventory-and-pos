@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://my-json-server.typicode.com/njmwas/inventory-and-pos";
+const API_BASE_URL = "https://mock-json-server-api-ox6c.onrender.com/api";
 
 const enventoryListTable = document.querySelector("#enventory-list tbody");
 const posPorductsDiv = document.querySelector('#pos-products');
