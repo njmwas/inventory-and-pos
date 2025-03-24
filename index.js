@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://my-json-server.typicode.com/njmwas/inventory-and-pos";
+
 const enventoryListTable = document.querySelector("#enventory-list tbody");
 const posPorductsDiv = document.querySelector('#pos-products');
 
@@ -41,7 +43,7 @@ function posEnlist(product) {
 }
 
 function enlistAllProducts() {
-    fetch("http://localhost:3006/products")
+    fetch(`${API_BASE_URL}/products`)
         .then(response => response.json())
         .then(products => {
             // console.log(products)
@@ -61,7 +63,7 @@ document.querySelector("#invetory-form").addEventListener("submit", (evt) => {
         price: form.price.value
     }
 
-    fetch("http://localhost:3006/products", {
+    fetch(`${API_BASE_URL}/products`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -104,7 +106,7 @@ const shoppingCart = {
 }
 
 function endlistPOSProducts() {
-    fetch("http://localhost:3006/products")
+    fetch(`${API_BASE_URL}/products`)
         .then(response => response.json())
         .then(products => {
 
