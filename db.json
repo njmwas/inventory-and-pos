@@ -1,0 +1,62 @@
+{
+    "products": [
+      {
+        "id": "abc0",
+        "name": "Fridge",
+        "instock": "9",
+        "description": "The double door fridge",
+        "price": "30000"
+      },
+      {
+        "id": "b819",
+        "name": "Microwave",
+        "instock": "10",
+        "description": "Gray microwave",
+        "price": "10000"
+      },
+      {
+        "id": "bd25",
+        "name": "45\" Television",
+        "instock": "50",
+        "description": "Full HD Color\nDigital TV",
+        "price": "399998"
+      },
+      {
+        "id": "b1e4",
+        "name": "Cooker",
+        "instock": "5",
+        "description": "4 Burnners etc",
+        "price": "250000"
+      },
+      {
+        "id": "76b4",
+        "name": "Touch",
+        "instock": "1000",
+        "description": "Bright light",
+        "price": "1000"
+      },
+      {
+        "id": "87d2",
+        "name": "Lksdfj",
+        "instock": "23",
+        "description": "slkdflsjd",
+        "price": "34534"
+      },
+      {
+        "id": "e545",
+        "name": "sfsdf",
+        "instock": "65",
+        "description": "dfgsdfsd",
+        "price": "6767"
+      },
+      {
+        "id": "5ee5",
+        "name": "sdfsdf",
+        "instock": "44",
+        "description": "sdfsd",
+        "price": "345345"
+      }
+    ],
+    "users": [],
+    "orders": []
+  }
